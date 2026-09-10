@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакти - Вебпроєкт</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Форма зворотного зв'язку</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Контактні дані</legend>
+                <p>
+                    <label for="username">Ім'я:</label><br>
+                    <input type="text" id="username" name="username" required minlength="2">
+                </p>
+                <p>
+                    <label for="useremail">Електронна пошта:</label><br>
+                    <input type="email" id="useremail" name="useremail" required>
+                </p>
+                <p>
+                    <label for="birthdate">Дата народження:</label><br>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Повідомлення</legend>
+                <p>
+                    <label for="topic">Тема звернення:</label><br>
+                    <select id="topic" name="topic" required>
+                        <option value="">-- Оберіть тему --</option>
+                        <option value="study">Навчання</option>
+                        <option value="practice">Лабораторні роботи</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="priority">Пріоритет (від 1 до 5):</label><br>
+                    <input type="number" id="priority" name="priority" min="1" max="5" value="3" required>
+                </p>
+                <p>
+                    <label for="message">Текст повідомлення:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="30" required minlength="5"></textarea>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Надіслати</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Навчальний проєкт</p>
+    </footer>
+</body>
+</html>
