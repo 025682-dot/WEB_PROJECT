@@ -2,63 +2,171 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти - Вебпроєкт</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Форма зворотного зв'язку</h1>
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Контактні дані</legend>
-                <p>
-                    <label for="username">Ім'я:</label><br>
-                    <input type="text" id="username" name="username" required minlength="2">
-                </p>
-                <p>
-                    <label for="useremail">Електронна пошта:</label><br>
-                    <input type="email" id="useremail" name="useremail" required>
-                </p>
-                <p>
-                    <label for="birthdate">Дата народження:</label><br>
-                    <input type="date" id="birthdate" name="birthdate" required>
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>Повідомлення</legend>
-                <p>
-                    <label for="topic">Тема звернення:</label><br>
-                    <select id="topic" name="topic" required>
-                        <option value="">-- Оберіть тему --</option>
-                        <option value="study">Навчання</option>
-                        <option value="practice">Лабораторні роботи</option>
-                        <option value="other">Інше</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="priority">Пріоритет (від 1 до 5):</label><br>
-                    <input type="number" id="priority" name="priority" min="1" max="5" value="3" required>
-                </p>
-                <p>
-                    <label for="message">Текст повідомлення:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="30" required minlength="5"></textarea>
-                </p>
-            </fieldset>
-            <p>
-                <button type="submit">Надіслати</button>
-            </p>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2026 Навчальний проєкт</p>
-    </footer>
+    <div class="site-layout">
+        <header class="site-header">
+            <a href="index.html" class="site-logo">WEB_PROJECT</a>
+            <nav class="main-nav" aria-label="Основна навігація">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="site-main">
+            <h1>Форма зворотного зв'язку</h1>
+
+            <form action="#" method="post" class="styled-form">
+                <fieldset>
+                    <legend>Контактні дані</legend>
+                    
+                    <div class="form-group">
+                        <label for="username">Ім'я здобувача:</label>
+                        <input type="text" id="username" name="username" placeholder="Вкажіть ПІБ" required minlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="useremail">Електронна пошта:</label>
+                        <input type="email" id="useremail" name="useremail" placeholder="name@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Дата народження:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Параметри запиту</legend>
+
+                    <div class="form-group">
+                        <label for="topic">Тема запиту:</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">-- Оберіть категорію --</option>
+                            <option value="css">Стилізація Flexbox/Grid</option>
+                            <option value="git">Контроль версій</option>
+                            <option value="other">Інше питання</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Рівень складності (від 1 до 5):</label>
+                        <input type="number" id="priority" name="priority" min="1" max="5" value="3" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Зміст звернення:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Опишіть ваше запитання" required minlength="5"></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit" class="btn">Надіслати повідомлення</button>
+                </div>
+            </form>
+        </main>
+
+        <aside class="site-sidebar">
+            <h3>Довідка</h3>
+            <p>Усі поля з зірочкою обов'язкові для заповнення та перевіряються браузером.</p>
+        </aside>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Навчальний проєкт. Херсонський державний університет.</p>
+        </footer>
+    </div>
+</body>
+</html>
+EO
+cat << 'EOF' > contact.html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Вебпроєкт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site-layout">
+        <header class="site-header">
+            <a href="index.html" class="site-logo">WEB_PROJECT</a>
+            <nav class="main-nav" aria-label="Основна навігація">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="site-main">
+            <h1>Форма зворотного зв'язку</h1>
+
+            <form action="#" method="post" class="styled-form">
+                <fieldset>
+                    <legend>Контактні дані</legend>
+                    
+                    <div class="form-group">
+                        <label for="username">Ім'я здобувача:</label>
+                        <input type="text" id="username" name="username" placeholder="Вкажіть ПІБ" required minlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="useremail">Електронна пошта:</label>
+                        <input type="email" id="useremail" name="useremail" placeholder="name@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Дата народження:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Параметри запиту</legend>
+
+                    <div class="form-group">
+                        <label for="topic">Тема запиту:</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">-- Оберіть категорію --</option>
+                            <option value="css">Стилізація Flexbox/Grid</option>
+                            <option value="git">Контроль версій</option>
+                            <option value="other">Інше питання</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Рівень складності (від 1 до 5):</label>
+                        <input type="number" id="priority" name="priority" min="1" max="5" value="3" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Зміст звернення:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Опишіть ваше запитання" required minlength="5"></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit" class="btn">Надіслати повідомлення</button>
+                </div>
+            </form>
+        </main>
+
+        <aside class="site-sidebar">
+            <h3>Довідка</h3>
+            <p>Усі поля з зірочкою обов'язкові для заповнення та перевіряються браузером.</p>
+        </aside>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Навчальний проєкт. Херсонський державний університет.</p>
+        </footer>
+    </div>
 </body>
 </html>
