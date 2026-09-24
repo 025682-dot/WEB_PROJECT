@@ -184,3 +184,10 @@ body {
   outline: 2px solid var(--color-focus-ring);
   border-color: var(--color-border-focus);
 }
+
+/* Планшетна ширина (>= 768px) */
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
