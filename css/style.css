@@ -191,3 +191,28 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Десктопна ширина (>= 1280px) */
+@media (min-width: 1280px) {
+  .site-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header  header"
+      "main    sidebar"
+      "footer  footer";
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+  }
+
+  .site-header { grid-area: header; }
+  .site-main { grid-area: main; }
+  .site-sidebar { grid-area: sidebar; align-self: start; }
+  .site-footer { grid-area: footer; }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
