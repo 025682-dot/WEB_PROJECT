@@ -48,3 +48,36 @@
   --shadow-sm: 0 1px 3px hsla(220, 30%, 10%, 0.08);
   --shadow-md: 0 4px 12px hsla(220, 30%, 10%, 0.12);
 }
+
+/* Темна тема: системна та через атрибут data-theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: hsl(220, 18%, 10%);
+    --color-surface: hsl(220, 18%, 14%);
+    --color-surface-subtle: hsl(220, 18%, 18%);
+    --color-border: hsl(220, 14%, 26%);
+    --color-border-focus: var(--color-primary-300);
+
+    --color-text: hsl(220, 15%, 96%);
+    --color-text-muted: hsl(220, 12%, 72%);
+    --color-text-inverse: hsl(220, 25%, 10%);
+
+    --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.4);
+    --shadow-md: 0 6px 16px hsla(0, 0%, 0%, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: hsl(220, 18%, 10%);
+  --color-surface: hsl(220, 18%, 14%);
+  --color-surface-subtle: hsl(220, 18%, 18%);
+  --color-border: hsl(220, 14%, 26%);
+  --color-border-focus: var(--color-primary-300);
+
+  --color-text: hsl(220, 15%, 96%);
+  --color-text-muted: hsl(220, 12%, 72%);
+  --color-text-inverse: hsl(220, 25%, 10%);
+
+  --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.4);
+  --shadow-md: 0 6px 16px hsla(0, 0%, 0%, 0.5);
+}
