@@ -36,7 +36,7 @@ WEB_PROJECT/
 
 ## 🌐 Демонстрація та репозиторій
 
-- **GitHub Pages (Живий сайт):** [025682-dot.github.io/WEB_PROJECT](https://025682-dot.github.io/WEB_PROJECT/)
+- **GitHub Pages :** [025682-dot.github.io/WEB_PROJECT](https://025682-dot.github.io/WEB_PROJECT/)
 - **Репозиторій на GitHub:** [github.com/025682-dot/WEB_PROJECT](https://github.com/025682-dot/WEB_PROJECT)
 
 ---
